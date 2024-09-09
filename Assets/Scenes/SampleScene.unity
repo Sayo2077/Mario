@@ -296,6 +296,7 @@ GameObject:
   - component: {fileID: 39660515}
   - component: {fileID: 39660519}
   - component: {fileID: 39660518}
+  - component: {fileID: 39660520}
   - component: {fileID: 39660517}
   m_Layer: 0
   m_Name: Enemies_9
@@ -457,6 +458,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.25}
   m_EdgeRadius: 0
+--- !u!95 &39660520
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39660514}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2db1d7153afd2004b9fbb1d79c517b1a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &49802140
 GameObject:
   m_ObjectHideFlags: 0
@@ -6127,7 +6149,7 @@ Transform:
   m_GameObject: {fileID: 1524014243}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.95, y: -1.5, z: 0}
+  m_LocalPosition: {x: 5.717, y: -0.599, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
