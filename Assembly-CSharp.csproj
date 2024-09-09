@@ -64,7 +64,6 @@
     <Compile Include="Assets\Script\Camera.cs" />
     <Compile Include="Assets\Script\Enimie.cs" />
     <Compile Include="Assets\Script\NextLevel.cs" />
-    <Compile Include="Assets\Script\Chuc Nang.cs" />
     <Compile Include="Assets\Script\Player.cs" />
     <Compile Include="Assets\Script\Animation End.cs" />
   </ItemGroup>
