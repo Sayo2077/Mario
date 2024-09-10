@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.ProjectWindowCallback;
+
 using UnityEngine;
 
 public class AnimationEnd : MonoBehaviour
@@ -29,7 +29,7 @@ public class AnimationEnd : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Player"))
+        if(collision.gameObject.CompareTag("player"))
         {
             end = 1;
             check++;

@@ -10,6 +10,8 @@ TagManager:
   - Nam
   - Block Rotation
   - CoEnd
+  - PhongTo
+  - player
   layers:
   - Default
   - TransparentFX

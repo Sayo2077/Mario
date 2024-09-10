@@ -686,7 +686,13 @@ PlayerSettings:
   XboxOneOverrideIdentityName: 
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    Build: 0
+    Game Performance: 0
+    Legacy Analytics: 0
+    Purchasing: 0
+    UDP: 0
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -706,11 +712,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: f10fc8d4-79b2-46ce-8d48-635a0262edb6
+  cloudProjectId: 05db46fd-ad52-428a-9ec6-3e45ba29eabe
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: Monster
-  organizationId: nguyenviethieudhspcntt
+  organizationId: viethieudhspcntt
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}

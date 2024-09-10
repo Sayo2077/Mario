@@ -15,10 +15,12 @@ public class NewBehaviourScript : MonoBehaviour
     public float MoveHigh;
     public float CheckJump = 0;
     public float EndGame = 0;
+    private float NumberScale;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        NumberScale = 1;
     }
 
     // Update is called once per frame
@@ -28,17 +30,17 @@ public class NewBehaviourScript : MonoBehaviour
         if (Input.GetKey(KeyCode.RightArrow) && CheckMove == 1 && EndGame == 0)
         {
             rb.velocity = new Vector2(Input.GetAxis("Horizontal") * Speed, rb.velocity.y);
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(NumberScale, NumberScale, NumberScale);
         }
         else if (Input.GetKey(KeyCode.LeftArrow) && CheckMove == 1 && EndGame == 0)
         {
             rb.velocity = new Vector2(Input.GetAxis("Horizontal") * Speed, rb.velocity.y);
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(-NumberScale, NumberScale, NumberScale);
         }
         
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            if (CheckJump < 9999999)
+            if (CheckJump < 1)
             {
                 rb.velocity = new Vector2(rb.velocity.x, MoveHigh);
                 CheckJump++;
@@ -49,8 +51,8 @@ public class NewBehaviourScript : MonoBehaviour
         
         if(EndGame == 1)
         {
-            transform.Translate(new Vector2(0.3f * Time.deltaTime, rb.velocity.y));
-            transform.localScale = new Vector2(1, 1);
+            transform.Translate(new Vector2(0.5f * Time.deltaTime, rb.velocity.y));
+            transform.localScale = new Vector2(NumberScale, NumberScale);
         }
     }
 
@@ -60,10 +62,17 @@ public class NewBehaviourScript : MonoBehaviour
         if(collision.gameObject.CompareTag("Ground"))
         {
             CheckMove = 1;
+            CheckJump = 0;
         }
         if(collision.gameObject.CompareTag("Block Jump"))
         {
             CheckMove = 0;
+        }
+        if(collision.gameObject.CompareTag("PhongTo"))
+        {
+            Destroy(collision.gameObject);
+            transform.localScale = new Vector2(1.5f,1.5f);
+            NumberScale = 1.5f;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
